@@ -231,7 +231,8 @@ final class PNFW_Migration_OneSignal {
 		$fields = array( 
 			'app_id' => self::$oneSingal_app_id,
 			'identifier' => $request_data["token"], 
-			"device_type" => 0
+			"device_type" => 0,
+			"tags" => array("blog_id" => strval(get_current_blog_id()), "pnfw_migration" => "true")
 			); 
 
 		$fields = json_encode($fields); 
@@ -281,7 +282,8 @@ final class PNFW_Migration_OneSignal {
 		$fields = array( 
 			'app_id' => self::$oneSingal_app_id,
 			"identifier" => $token,
-			"notification_types" => -2
+			"notification_types" => -2,
+			"tags" => array("blog_id" => strval(get_current_blog_id()), "pnfw_migration" => "true")
 		); 
 		$fields = json_encode($fields); 
 
