@@ -23,7 +23,11 @@ Easy migrate your Push-Users from Pushnotifications for WordPress-Plugin to OneS
 4. Activate PNFW Migration OneSignal through the 'Plugins' menu in WordPress.
 
 ## Frequently Asked Questions ##
+### Does this plugin support WP-Multisite and different blog-ids?
+Yes, this plugin add a user-tag named "blog_id" and the current blog-id as value. With a custom segment and an if condition you will be able to identify where the device is registered and send push notifications based on this condition.
 
+### Filter migrated Users?
+Yes, this plugins add a user-tag named "pnfw_migration" and the value "true". Creating a custom segment with if-condition and you will be able to see all migrated users.
 
 ## Screenshots ##
 
